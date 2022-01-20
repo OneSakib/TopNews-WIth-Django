@@ -1,0 +1,86 @@
+{%extends 'basic.html' %}
+{% block title %}Online Examination System{% endblock %}
+{% block css %}
+<style>
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .carousel-indicators .btn {
+        background-color: #0a53be;
+    }
+
+    .carousel-control-next-icon:hover,.carousel-control-prev-icon:hover {
+        background-color: #0a53be;
+    }
+</style>
+{% endblock %}
+{% block body %}
+<div class="container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button"  data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active btn" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class="btn"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class="btn"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <h3>CHMSC Online Exam Test</h3>
+                <p>Train for competitive exams with a free online examination. Adaptability,
+                    Computer Questions and Logical Reasoning will assist you in preparing for the Online Exam.
+                    Interview and Entrance.
+
+                    Learn and practice free online tests when studying for your exam.
+
+                    There are numerous free tests and study materials available, all of which provide answers and explanations.</p>
+                <div class="agileits_w3layouts_more">
+                    <a href="/register" data-toggle="modal" data-target="#myModal" class="btn btn-success h-btn mar-b8 mar-h4 js-tb-signup-anchor">GET STARTED</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <h3>PRACTICE MAKES PERFECT, ANALYZE, BRAIN STORMING AND IMPROVE YOUR KNOWLEDGE</h3>
+                <p>
+                    Thousands of questions to practice for free while having fun! Take free quizzes and mock tests, and write down all of your key questions for later review. Exam updates and expert posts can be found here.
+
+                    On your Laptop or Computer unit, this Website offers the simplest and smoothest test-taking experience.</p>
+                <div class="agileits_w3layouts_more">
+                    <a href="/register" data-toggle="modal" data-target="#myModal" class="btn btn-success h-btn mar-b8 mar-h4 js-tb-signup-anchor">GET STARTED</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <h3>About CHMSC School</h3>
+                <p>CHMSC Online Exam is a company that offers online exams and materials. We have been facilitating on-line mock tests/examinations for students for a number of years. We have earned our esteemed clients' confidence in such a short time by successfully meeting their standards.</p>
+                <div class="agileits_w3layouts_more">
+                    <a href="/register" data-toggle="modal" data-target="myModal" class="btn btn-success h-btn mar-b8 mar-h4 js-tb-signup-anchor">GET STARTED</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+<!-- news-letter -->
+<div class="container">
+    <div class="news-letter bg-primary mt-1">
+        <div class="container">
+            <h3 class="w3ls_head"><span>Subscribe </span>Here </h3>
+            <div class="agileinfo-subscribe">
+                <form action="#" method="post">
+                    <input type="text" placeholder="Name" name="Name" required="" style="color:black;">
+                    <input type="email" placeholder="Email" name="Email" required="" style="color:black;">
+                    <input type="submit" class="btn btn-success" value="Subscribe">
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //news-letter -->
+{% endblock %}

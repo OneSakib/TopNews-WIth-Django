@@ -1,0 +1,24 @@
+{%extends 'basic.html' %}
+{% block title %}Online Examination System{% endblock %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block css %}
+<style>
+    .container .col-md-4 h3 {
+        padding: 70px;
+    }
+</style>
+{% endblock %}
+{% block body %}
+<div class="container">
+    <h3 class="text-center bg-success text-white p-3">Welcome to CHMSC Online Examination</h3>
+    <h2>Online Test For Exam</h2>
+    <div class="row">
+        {% for exam in exam %}
+        <div class="col-md-4">
+            <a href="/exam?name={{exam.exam_name}}" class="text-decoration-none"><h3 class="bg-dark text-white text-center">{{exam.exam_name}}</h3></a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
