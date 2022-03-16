@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{% block body %}
+<div class="container mt-3 ">
+    <div class="row">
+        {% for post in posts %}
+        <div class="col-12 mt-3">
+            <div class="h-100 p-5 text-white bg-dark rounded-3 ">
+                <h2>{{post.title}}</h2>
+                <p>{{post.desc}}.</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock body %}

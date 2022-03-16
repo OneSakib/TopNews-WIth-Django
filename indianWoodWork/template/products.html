@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block product %}active{% endblock %}
+{% load static %}
+<link rel="canonical" href="">
+<meta name="description"
+      content="MyGovernment Jobs On Fill the Online Government Job Form Easily You Can Find the Any type of Job in this Website You can Set the notification for the Next Government Job">
+<meta name="keywords"
+      content="Government Jobs,Sarkari Jobs,Government Naukari,Sarkari Naukari,Online Exam Online Government Jobs,Sarkari Result, latest sarkari results, Sarkariresult, Sarkari, Sarkariresults,Samani Computers Online Form,CCSU,Aktu,CCSU Online Exam,Aktu Online Exam
+      Up Board Results,Intermediate Results ,Uttar Pradesh Board,Uttar Pradesh Yojnaye, सरकारी नौकरी,ccs यूनिवर्सिटी ऑनलाइन फॉर्म,AKTU ऑनलाइन फॉर्म,UP बोर्ड रिजल्ट, 12 रिजल्ट,10 रिजल्ट ">
+<meta property="og:url" content=""/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="MyGovernmentJob.co.in"/>
+<meta property="og:description" content="Latest Job, Online Form ,Latest Admit Card,Latest Syllabus"/>
+{% block title %}Indian Wood Work Products{% endblock %}
+{% block css %}
+<style>
+    @media only screen and (max-width: 540px) {
+        .name {
+            font-size: 15px;
+        }
+
+        .desc {
+            font-size: 10px;
+        }
+
+        .btn-group a {
+            font-size: 10px;
+        }
+    }
+</style>
+{% endblock %}
+{% block body %}
+<div class="container">
+    <h1 class="display-4 fw-normal text-center">Indian Wood Work Products</h1>
+    <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 g-3">
+        {% for im in data %}
+        <div class="col">
+            <div class="card shadow-sm">
+                <img src="/media/{{im.smallimage}}">
+                <div class="card-body">
+                    <h3 class="name">{{im.name}}</h3>
+                    <h5 class="desc">{{im.description}}</h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a type="button" href="productview/{{im.slug}}"
+                               class="btn btn-sm btn-outline-secondary">View
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<!--Pagination-->
+
+<div class="container pt-4">
+    <nav aria-label="Page navigation ">
+        <ul class="pagination justify-content-center">
+            {% if data.paginator.num_pages != 1 %}
+            <li class="page-item"><a class="page-link" href="?page=1">First</a></li>
+            {% else %}
+            <li class="page-item disabled"><a class="page-link" href="#">First</a></li>
+            {% endif %}
+            {% if data.has_previous %}
+            <li class="page-item"><a class="page-link" href="?page={{ data.previous_page_number }}">&laquo;</a></li>
+            {% else %}
+            <li class="page-item disabled"><a class="page-link" href="#">&laquo;</a></li>
+            {% endif %}
+            {% for i in data.paginator.page_range %}
+            {% if data.number == i %}
+            <li class="page-item active"><a class="page-link" href="#">{{ i }}</a></li>
+            {% elif data.number > i|add:"-5" and data.number < i|add:"+5"%}
+            <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+            {% endif %}
+            {% endfor %}
+            {% if data.has_next %}
+            <li class="page-item"><a class="page-link" href="?page={{ data.next_page_number }}">&raquo;</a></li>
+            {% else %}
+            <li class="page-item disabled"><a class="page-link" href="#">&raquo;</a></li>
+            {% endif %}
+            {% if data.paginator.num_pages != data.number %}
+            <li class="page-item"><a class="page-link" href="?page={{ data.paginator.num_pages }}">Last</a></li>
+            {% else %}
+            <li class="page-item disabled"><a class="page-link" href="#">Last</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+
+{% endblock %}
+{% block js %}{% endblock %}

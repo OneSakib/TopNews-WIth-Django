@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block home %}active{% endblock %}
+{% load static %}
+<link rel="canonical" href="">
+<meta name="description"
+      content="MyGovernment Jobs On Fill the Online Government Job Form Easily You Can Find the Any type of Job in this Website You can Set the notification for the Next Government Job">
+<meta name="keywords"
+      content="Government Jobs,Sarkari Jobs,Government Naukari,Sarkari Naukari,Online Exam Online Government Jobs,Sarkari Result, latest sarkari results, Sarkariresult, Sarkari, Sarkariresults,Samani Computers Online Form,CCSU,Aktu,CCSU Online Exam,Aktu Online Exam
+      Up Board Results,Intermediate Results ,Uttar Pradesh Board,Uttar Pradesh Yojnaye, सरकारी नौकरी,ccs यूनिवर्सिटी ऑनलाइन फॉर्म,AKTU ऑनलाइन फॉर्म,UP बोर्ड रिजल्ट, 12 रिजल्ट,10 रिजल्ट ">
+<meta property="og:url" content=""/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="MyGovernmentJob.co.in"/>
+<meta property="og:description" content="Latest Job, Online Form ,Latest Admit Card,Latest Syllabus"/>
+{% block title %}Indian Wood Work{% endblock %}
+{% block css %}
+<style>
+
+</style>
+{% endblock %}
+{% block body %}
+<div class="container pt-3">
+    <h1 class="display-4 fw-normal text-center">Indian Wood Work</h1>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'images/image1.jpg'%}" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                    <h4>Almira</h4>
+                    <p>This Almira is Made from the Best Wood</p>
+                </div>
+            </div>
+            {% for im in data %}
+            <div class="carousel-item">
+                <img src="/media/{{im.image}}" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                    <h4> {{im.name}} </h4>
+                    <p>{{im.description}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+<div class="container pt-3">
+    <h4 class="text-primary">Indian Wood Work </h4>
+    <p>
+        Indian Wood Work in mohali is one of the leading businesses in the Furniture Dealers. Also known for
+        Furniture Dealers, Dining Table Dealers, Bed Dealers, Centre Table Dealers, Wall Unit Dealers and much more.
+
+        Indian Wood Work in Mohali HO, Mohali has been in the business of retailing and distributing furniture.
+        This dealer primarily stocks and retails furniture and interior décoration for homes and households. It also
+        deals in office furnishings for commercial spaces and business establishments. In the business for years,
+        this enterprise is one of the prominent points-of-sale in the city for buying fancy and stylish furniture
+        pieces. It features a product range that is sync with the accepted trends and styles in interior décor and
+        design. Being of high quality, trendy designs and available at affordable price points, the products have
+        helped them gain a staggering base of customers over the course of time. For the local citizens of Mohali
+        HO, this furniture retailer is a recognised name. It occupies a prominent location at ,Mauli Baiden, Mohali
+        surrounded by shopping destinations and commercial complexes.
+    </p>
+    <h4 class="text-primary">Services offered by Indian Wood Work</h4>
+    <p>
+        Indian Wood Work in Mohali HO has a vast catalogue of furniture pieces to cater to residences as well as
+        office spaces. For decorating your home, you can select from a variety of elegantly crafted wooden almirahs,
+        center tables, cottz beds, dining tables, diwan-cum-beds, foam diwans, sofa sets and dining tables. You can
+        shop for a wide range of office furniture such as executive chairs. This establishment is also into
+        designing, installing and support services for modular kitchens through kitchen-by-design service. On the
+        premises is a team of sales staff that help you in shortlisting from their furniture range according to your
+        needs and requirements.
+    </p>
+    <h4 class="text-primary">Address</h4>
+    <p>
+        Mauli Baidwan, Mohali 140308 Sohana (Punjab)
+    </p>
+</div>
+
+{% endblock %}
+{% block js %}
+
+{% endblock %}

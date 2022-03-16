@@ -1,0 +1,50 @@
+{% extends 'blog/base.html' %}
+{% block body %}
+<div class="container">
+    <h1>Welcome <i>{{full_name}} </i></h1>
+    <div class="col-2 text-center">
+        <h4 class="my-5">Profile</h4>
+        <h5>{{full_name}}</h5>
+        {% for group in groups %}
+        <p>{{group.name}}</p>
+        {% endfor %}
+    </div>
+
+    <h3 class="text-center bg-success text-dark">Daskboard Page Information</h3>
+    <a href="{% url 'Blog:addpost' %}" class="btn btn-success">Add Post</a>
+    {% if posts %}
+    <table class="table table-hover bg-white">
+        <thead>
+        <tr class="text-center">
+            <th scope="col" style="width: 2%">Id</th>
+            <th scope="col" style="width: 28%">Title</th>
+            <th scope="col" style="width: 55%">Description</th>
+            <th scope="col" style="width: 15%">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for post in posts %}
+        <tr>
+            <th scope="row">{{post.id}}</th>
+            <td>{{post.title}}</td>
+            <td>{{post.desc}}</td>
+            <td class="text-center">
+                <a href="{% url 'Blog:updatepost' post.id %}" class="btn btn-warning btn-sm">Edit</a>
+                {% if perms.Blog.delete_post %}
+                <form action="{% url 'Blog:deletepost' post.id %}" method="post" class="d-inline">
+                    {% csrf_token %}
+                    <input value="Delete" type="submit" class="btn btn-danger btn-sm">
+                </form>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <h4 class="text-center alert alert-warning">No Records Found</h4>
+
+    {% endif %}
+
+</div>
+{% endblock %}

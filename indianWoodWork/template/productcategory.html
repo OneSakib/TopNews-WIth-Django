@@ -1,0 +1,204 @@
+{% extends 'base.html' %}
+{% block product %}active{% endblock %}
+{% load static %}
+<link rel="canonical" href="">
+<meta name="description"
+      content="MyGovernment Jobs On Fill the Online Government Job Form Easily You Can Find the Any type of Job in this Website You can Set the notification for the Next Government Job">
+<meta name="keywords"
+      content="Government Jobs,Sarkari Jobs,Government Naukari,Sarkari Naukari,Online Exam Online Government Jobs,Sarkari Result, latest sarkari results, Sarkariresult, Sarkari, Sarkariresults,Samani Computers Online Form,CCSU,Aktu,CCSU Online Exam,Aktu Online Exam
+      Up Board Results,Intermediate Results ,Uttar Pradesh Board,Uttar Pradesh Yojnaye, सरकारी नौकरी,ccs यूनिवर्सिटी ऑनलाइन फॉर्म,AKTU ऑनलाइन फॉर्म,UP बोर्ड रिजल्ट, 12 रिजल्ट,10 रिजल्ट ">
+<meta property="og:url" content=""/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="MyGovernmentJob.co.in"/>
+<meta property="og:description" content="Latest Job, Online Form ,Latest Admit Card,Latest Syllabus"/>
+{% block title %}Indian Wood Work Products{% endblock %}
+{% block css %}
+<style>
+    @media only screen and (max-width: 540px) {
+        .name {
+            font-size: 15px;
+        }
+
+        .desc {
+            font-size: 10px;
+        }
+
+        .btn-group a {
+            font-size: 10px;
+        }
+
+        div .btn {
+            font-size: 8px;
+            padding: 4px;
+        }
+    }
+</style>
+{% endblock %}
+{% block body %}
+<div class="container">
+    <h1 class="display-4 fw-normal text-center">Indian Wood Work Products</h1>
+    <div class="row row-cols-3 row-cols-sm-3 row-cols-md-3 g-3">
+        <h3 class=" col-12 display-6 fw-normal text-primary">Almira</h3>
+        {% for im in Almiras %}
+        <div class="col pt-3">
+            <div class="card shadow-sm">
+                <img src="/media/{{im.smallimage}}">
+                <div class="card-body">
+                    <h3 class="name">{{im.name}}</h3>
+                    <h5 class="desc">{{im.description}}</h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a type="button" href="productview/{{im.slug}}"
+                               class="btn btn-sm btn-outline-secondary">View
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <div class="float-end col-12"><a href="product/Almiras" class="btn btn-primary">View All</a></div>
+        <h3 class=" col-12 display-6 fw-normal text-primary">LCD Panels</h3>
+        {% for im in LCDPanels %}
+        <div class="col">
+            <div class="card shadow-sm">
+                <img src="/media/{{im.smallimage}}">
+                <div class="card-body">
+                    <h3 class="name">{{im.name}}</h3>
+                    <h5 class="desc">{{im.description}}</h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a type="button" href="productview/{{im.slug}}"
+                               class="btn btn-sm btn-outline-secondary">View
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <div class="float-end col-12"><a href="product/LCDPanles" class="btn btn-primary">View All</a></div>
+        <h3 class="col-12 display-6 fw-normal text-primary">Modular Kitchens</h3>
+        {% for im in ModularKitchens %}
+        <div class="col">
+            <div class="card shadow-sm">
+                <img src="/media/{{im.smallimage}}">
+                <div class="card-body">
+                    <h3 class="name">{{im.name}}</h3>
+                    <h5 class="desc">{{im.description}}</h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a type="button" href="productview/{{im.slug}}"
+                               class="btn btn-sm btn-outline-secondary">View
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <div class="float-end col-12"><a href="product/ModularKitchens" class="btn btn-primary">View All</a></div>
+        <h3 class="col-12 display-6 fw-normal text-primary">Beds</h3>
+        {% for im in Beds %}
+        <div class="col">
+            <div class="card shadow-sm">
+                <img src="/media/{{im.smallimage}}">
+                <div class="card-body">
+                    <h3 class="name">{{im.name}}</h3>
+                    <h5 class="desc">{{im.description}}</h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a type="button" href="productview/{{im.slug}}"
+                               class="btn btn-sm btn-outline-secondary">View
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <div class="float-end col-12"><a href="product/Beds" class="btn btn-primary">View All</a></div>
+        <h3 class="col-12 display-6 fw-normal text-primary">Tables</h3>
+        {% for im in Tables %}
+        <div class="col">
+            <div class="card shadow-sm">
+                <img src="/media/{{im.smallimage}}">
+                <div class="card-body">
+                    <h3 class="name">{{im.name}}</h3>
+                    <h5 class="desc">{{im.description}}</h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a type="button" href="productview/{{im.slug}}"
+                               class="btn btn-sm btn-outline-secondary">View
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <div class="float-end col-12"><a href="product/Tables" class="btn btn-primary">View All</a></div>
+        <h3 class="col-12 display-6 fw-normal text-primary">Showroom Works</h3>
+        {% for im in ShowroomWorks %}
+        <div class="col">
+            <div class="card shadow-sm">
+                <img src="/media/{{im.smallimage}}">
+                <div class="card-body">
+                    <h3 class="name">{{im.name}}</h3>
+                    <h5 class="desc">{{im.description}}</h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a type="button" href="productview/{{im.slug}}"
+                               class="btn btn-sm btn-outline-secondary">View
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <div class="float-end col-12"><a href="product/ShowroomWorks" class="btn btn-primary">View All</a></div>
+        <h3 class="col-12 display-6 fw-normal text-primary">Doors</h3>
+        {% for im in Doors %}
+        <div class="col">
+            <div class="card shadow-sm">
+                <img src="/media/{{im.smallimage}}">
+                <div class="card-body">
+                    <h3 class="name">{{im.name}}</h3>
+                    <h5 class="desc">{{im.description}}</h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a type="button" href="productview/{{im.slug}}"
+                               class="btn btn-sm btn-outline-secondary">View
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <div class="float-end col-12"><a href="product/Doors" class="btn btn-primary">View All</a></div>
+        <h3 class="col-12 display-6 fw-normal text-primary">Palles</h3>
+        {% for im in Palles %}
+        <div class="col">
+            <div class="card shadow-sm">
+                <img src="/media/{{im.smallimage}}">
+                <div class="card-body">
+                    <h3 class="name">{{im.name}}</h3>
+                    <h5 class="desc">{{im.description}}</h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a type="button" href="productview/{{im.slug}}"
+                               class="btn btn-sm btn-outline-secondary">View
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <div class="float-end col-12"><a href="product/Palles" class="btn btn-primary">View All</a></div>
+    </div>
+</div>
+{% endblock %}
+{% block js %}{% endblock %}
